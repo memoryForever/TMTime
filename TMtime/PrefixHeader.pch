@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  TMtime
+//
+//  Created by tarena33 on 16/3/16.
+//  Copyright © 2016年 tarena. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+/** 定义url **/
+#define TQWURL_SHOP_DEALS       @"http://apis.baidu.com/baidunuomi/openapi/shopdeals"
+#define TQWURL_SHOP_INFO        @"http://apis.baidu.com/baidunuomi/openapi/shopinfo"
+#define TQWURL_CITIES           @"http://apis.baidu.com/baidunuomi/openapi/cities"
+#define TQWURL_DISTRICTS        @"http://apis.baidu.com/baidunuomi/openapi/districts"
+#define TQWURL_CATEGORIES       @"http://apis.baidu.com/baidunuomi/openapi/categories"
+/**
+ *  查询商品信息
+ */
+#define TQWURL_SEARCH_SHOP_INFO @"http://apis.baidu.com/baidunuomi/openapi/searchshops"
+/**
+ *  KEY
+ */
+#define APIKEY @"key=50343d68c65f8f36835a907913718a79"
+
+#endif /* PrefixHeader_pch */
