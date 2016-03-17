@@ -37,8 +37,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.memoryData getTodayMovies];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData:) name:@"todayMovies" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateImage:) name:@"updateTodayImage" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData:) name:@"todayDataUpdate" object:nil];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     [self.collectionView registerClass:[TQWTodayMoviesCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 }
@@ -46,6 +46,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)updateData:(NSNotification*)notification{
     [self.collectionView reloadData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateImage:) name:@"updateTodayImage" object:nil];
 }
 -(void)updateImage:(NSNotification*)notification{
     NSInteger index = 0 ;
@@ -56,9 +57,9 @@ static NSString * const reuseIdentifier = @"Cell";
         }
         index ++ ;
     }
-    
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
-   // [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+   [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+   // [self.collectionView reloadData];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -91,9 +92,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
    TQWTodayMoviesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     TQWTodayMovies *moves = self.allData[indexPath.item];
-    UIImageView *imageView = [[UIImageView alloc]init];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)];
     imageView.image = moves.TQWMovieImage ? moves.TQWMovieImage : [UIImage imageNamed:@"head1"];
-    cell.backgroundView = imageView;
     [cell.contentView addSubview:imageView];
     return cell;
 }
@@ -128,5 +128,7 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
-
+-(void)viewDidAppear:(BOOL)animated{
+    
+}
 @end

@@ -22,19 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupCollectionView];
-    
 }
 -(void)setupCollectionView{
-    
     self.todayMoveTodayMovies = [[TQWTodayMoviesCollectionViewController alloc]initWithCollectionViewLayout:[[TQWTodayMoviesConllectionViewFlowLayout alloc]init]];
     [self addChildViewController:self.todayMoveTodayMovies];
-    [self.view addSubview:self.todayMoveTodayMovies.view];
-    self.todayMoveTodayMovies.view.translatesAutoresizingMaskIntoConstraints = NO ;
-    [self.todayMoveTodayMovies.view mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.todayMoveTodayMovies.collectionView.contentSize = CGSizeMake(1000, 0);
+    [self.view addSubview:self.todayMoveTodayMovies.collectionView];
+    self.todayMoveTodayMovies.collectionView.translatesAutoresizingMaskIntoConstraints = NO ;
+    [self.todayMoveTodayMovies.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
         make.top.equalTo(self.view);
-        make.height.mas_equalTo(@120);
+        make.height.mas_equalTo(@170);
     }];
   
 }

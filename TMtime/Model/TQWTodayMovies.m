@@ -39,7 +39,9 @@ static dispatch_queue_t _TQWTodayMoviesQueque;
     dispatch_async(_TQWTodayMoviesQueque, ^{
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
         _TQWMovieImage = [UIImage imageWithData:data];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTodayImage" object:mySelf userInfo:@{@"moveId":_TQWMovieId}];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"updateTodayImage" object:mySelf userInfo:@{@"moveId":_TQWMovieId}];
+        });
         [mySelf saveImageToFilePath:[mySelf saveImagePath] writeData:data];
     });
 }
@@ -49,6 +51,10 @@ static dispatch_queue_t _TQWTodayMoviesQueque;
       __weak  id mySelf = self;
       dispatch_async(_TQWTodayMoviesQueque, ^{
           NSData *data = [NSData dataWithContentsOfFile:path];
+          if (!data) {
+              [mySelf getImageForImageUrl:_TQWMoviePicURL];
+              return ;
+          }
           _TQWMovieImage = [UIImage imageWithData:data];
           
           dispatch_async(dispatch_get_main_queue(), ^{
