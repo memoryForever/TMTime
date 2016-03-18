@@ -33,7 +33,7 @@
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
         make.top.equalTo(self.view);
-        make.height.mas_equalTo(@170);
+        make.height.mas_equalTo(@255);
     }];
   
 }

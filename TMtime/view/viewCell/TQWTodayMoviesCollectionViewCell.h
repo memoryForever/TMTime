@@ -10,4 +10,8 @@
 
 @interface TQWTodayMoviesCollectionViewCell : UICollectionViewCell
 
+/**
+*  设置cell
+*/
+-(void)setCellMoviesImage:(UIImage*)image Name:(NSString*)name;
 @end

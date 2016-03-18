@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A23661A1C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2366181C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.m */; };
+		2A23661B1C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2366191C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.xib */; };
+		2A2366221C9ACA97004D7562 /* TQWMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2366211C9ACA97004D7562 /* TQWMainTableViewController.m */; };
+		2A2366261C9ACAC7004D7562 /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2366251C9ACAC7004D7562 /* MainPage.storyboard */; };
 		2A9F51391C99804C00563F45 /* TQWMemorySaveNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F51381C99804C00563F45 /* TQWMemorySaveNetworkData.m */; };
 		2A9F513E1C9988D600563F45 /* TQWParserNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F513D1C9988D600563F45 /* TQWParserNetworkData.m */; };
 		2AA0EB901C997AB100023E3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0EB8F1C997AB100023E3C /* main.m */; };
@@ -19,12 +23,17 @@
 		2AF9A87C1C9A507B00EB2498 /* TQWTodayMovies.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9A87B1C9A507B00EB2498 /* TQWTodayMovies.m */; };
 		2AF9A8811C9A6E9300EB2498 /* TQWTodayMoviesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9A8801C9A6E9300EB2498 /* TQWTodayMoviesCollectionViewController.m */; };
 		2AF9A8841C9A6ECC00EB2498 /* TQWTodayMoviesConllectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9A8831C9A6ECC00EB2498 /* TQWTodayMoviesConllectionViewFlowLayout.m */; };
-		2AF9A8871C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9A8861C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.m */; };
 		907666FF6A62399EFA0A9B6E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9CC15ED3AE76930DA30798 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		087EC07CAB1A0ECD3689C2D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2A2366171C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQWTodayMoviesCollectionViewCell.h; sourceTree = "<group>"; };
+		2A2366181C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQWTodayMoviesCollectionViewCell.m; sourceTree = "<group>"; };
+		2A2366191C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TQWTodayMoviesCollectionViewCell.xib; path = ../viewCell/TQWTodayMoviesCollectionViewCell.xib; sourceTree = "<group>"; };
+		2A2366201C9ACA97004D7562 /* TQWMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQWMainTableViewController.h; sourceTree = "<group>"; };
+		2A2366211C9ACA97004D7562 /* TQWMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQWMainTableViewController.m; sourceTree = "<group>"; };
+		2A2366251C9ACAC7004D7562 /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		2A9F51371C99804C00563F45 /* TQWMemorySaveNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQWMemorySaveNetworkData.h; sourceTree = "<group>"; };
 		2A9F51381C99804C00563F45 /* TQWMemorySaveNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQWMemorySaveNetworkData.m; sourceTree = "<group>"; };
 		2A9F513B1C99818000563F45 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -48,8 +57,6 @@
 		2AF9A8801C9A6E9300EB2498 /* TQWTodayMoviesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQWTodayMoviesCollectionViewController.m; sourceTree = "<group>"; };
 		2AF9A8821C9A6ECC00EB2498 /* TQWTodayMoviesConllectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQWTodayMoviesConllectionViewFlowLayout.h; sourceTree = "<group>"; };
 		2AF9A8831C9A6ECC00EB2498 /* TQWTodayMoviesConllectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQWTodayMoviesConllectionViewFlowLayout.m; sourceTree = "<group>"; };
-		2AF9A8851C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQWTodayMoviesCollectionViewCell.h; path = ../../ViewController/TQWTodayMoviesCollectionViewCell.h; sourceTree = "<group>"; };
-		2AF9A8861C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQWTodayMoviesCollectionViewCell.m; path = ../../ViewController/TQWTodayMoviesCollectionViewCell.m; sourceTree = "<group>"; };
 		3A9CC15ED3AE76930DA30798 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C508539ADA0928F1A39C815 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +80,15 @@
 				3C508539ADA0928F1A39C815 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2A23661C1C9AC9DE004D7562 /* mainTableController */ = {
+			isa = PBXGroup;
+			children = (
+				2A2366201C9ACA97004D7562 /* TQWMainTableViewController.h */,
+				2A2366211C9ACA97004D7562 /* TQWMainTableViewController.m */,
+			);
+			name = mainTableController;
 			sourceTree = "<group>";
 		};
 		2A9F513A1C99817200563F45 /* pch */ = {
@@ -168,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA0EBB41C997D0A00023E3C /* test.storyboard */,
+				2A2366251C9ACAC7004D7562 /* MainPage.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -175,6 +192,8 @@
 		2AA0EBAA1C997B3A00023E3C /* viewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2A2366171C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.h */,
+				2A2366181C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.m */,
 			);
 			path = viewCell;
 			sourceTree = "<group>";
@@ -182,8 +201,6 @@
 		2AA0EBAB1C997B5300023E3C /* viewComment */ = {
 			isa = PBXGroup;
 			children = (
-				2AF9A8851C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.h */,
-				2AF9A8861C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.m */,
 			);
 			path = viewComment;
 			sourceTree = "<group>";
@@ -191,6 +208,7 @@
 		2AA0EBAC1C997B6C00023E3C /* NIBView */ = {
 			isa = PBXGroup;
 			children = (
+				2A2366191C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.xib */,
 			);
 			path = NIBView;
 			sourceTree = "<group>";
@@ -220,6 +238,7 @@
 		2AF9A87D1C9A6E1900EB2498 /* mainPageController */ = {
 			isa = PBXGroup;
 			children = (
+				2A23661C1C9AC9DE004D7562 /* mainTableController */,
 				2AF9A87E1C9A6E3000EB2498 /* todaySubController */,
 			);
 			name = mainPageController;
@@ -304,7 +323,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A23661B1C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.xib in Resources */,
 				2AA0EB9E1C997AB100023E3C /* LaunchScreen.storyboard in Resources */,
+				2A2366261C9ACAC7004D7562 /* MainPage.storyboard in Resources */,
 				2AA0EBB51C997D0A00023E3C /* test.storyboard in Resources */,
 				2AA0EB9B1C997AB100023E3C /* Assets.xcassets in Resources */,
 			);
@@ -366,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9F51391C99804C00563F45 /* TQWMemorySaveNetworkData.m in Sources */,
+				2A2366221C9ACA97004D7562 /* TQWMainTableViewController.m in Sources */,
 				2AA0EBB81C997D5200023E3C /* testViewController.m in Sources */,
 				2AA0EBB21C997C3900023E3C /* AppDelegate.m in Sources */,
 				2AF9A8841C9A6ECC00EB2498 /* TQWTodayMoviesConllectionViewFlowLayout.m in Sources */,
@@ -373,7 +395,7 @@
 				2AF9A87C1C9A507B00EB2498 /* TQWTodayMovies.m in Sources */,
 				2A9F513E1C9988D600563F45 /* TQWParserNetworkData.m in Sources */,
 				2AF9A8811C9A6E9300EB2498 /* TQWTodayMoviesCollectionViewController.m in Sources */,
-				2AF9A8871C9A6EF200EB2498 /* TQWTodayMoviesCollectionViewCell.m in Sources */,
+				2A23661A1C9ABD65004D7562 /* TQWTodayMoviesCollectionViewCell.m in Sources */,
 				2AA0EB901C997AB100023E3C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

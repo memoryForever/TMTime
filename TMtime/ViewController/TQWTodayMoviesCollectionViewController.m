@@ -26,7 +26,7 @@
     return _allData ;
 }
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"TodayMoviesCell";
 
 -(TQWMemorySaveNetworkData *)memoryData{
     if (!_memoryData) {
@@ -39,10 +39,9 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.memoryData getTodayMovies];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData:) name:@"todayDataUpdate" object:nil];
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    
-    [self.collectionView registerClass:[TQWTodayMoviesCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView.showsHorizontalScrollIndicator = NO ;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"TQWTodayMoviesCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 }
-
 
 -(void)updateData:(NSNotification*)notification{
     [self.collectionView reloadData];
@@ -59,7 +58,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-   // [self.collectionView reloadData];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -92,9 +90,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
    TQWTodayMoviesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     TQWTodayMovies *moves = self.allData[indexPath.item];
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, cell.bounds.size.width, cell.bounds.size.height)];
-    imageView.image = moves.TQWMovieImage ? moves.TQWMovieImage : [UIImage imageNamed:@"head1"];
-    [cell.contentView addSubview:imageView];
+    [cell setCellMoviesImage:moves.TQWMovieImage  Name:moves.TQWMovieName];
     return cell;
 }
 
